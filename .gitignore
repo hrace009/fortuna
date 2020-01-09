@@ -1,0 +1,35 @@
+# Ignore assets that are generated automatically
+
+/public/backend
+/public/css
+/public/js
+/public/vendor
+/public/dist
+
+# Laravel
+/node_modules
+/storage/*.key
+/storage/fonts/
+/storage/framework
+/vendor
+.env.testing
+.env
+.env.example
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+laravel-echo-server.json
+laravel-echo-server.lock
+
+# Env
+/.vscode
+/.history
+/.idea
+
+.DS_Store
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+.php_cs.cache

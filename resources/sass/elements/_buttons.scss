@@ -1,0 +1,65 @@
+.btn {
+  cursor: pointer;
+}
+
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  color: transparent !important;
+
+  &:after {
+    animation: spinAround 500ms infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: calc(50% - (1em / 2));
+    top: calc(50% - (1em / 2));
+  }
+}
+
+@keyframes spinAround {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+.pagseguro-button-container {
+  min-width: 150px;
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+  background: 0;
+  font-family: "Helvetica Neue";
+  -webkit-font-smoothing: antialiased;
+  z-index: 0;
+  font-size: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pagseguro-btn {
+  background-color: #4ab251;
+  border-color: #4ab251;
+  font-size: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #4ab251;
+    border-color: #4ab251;
+    font-size: 10px;
+    filter: brightness(1.1)
+
+  }
+}
+
+.pagseguro-button-logo {
+  height: 15px;
+  max-height: 20px;
+  min-height: 15px
+}

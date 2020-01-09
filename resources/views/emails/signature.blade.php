@@ -1,0 +1,2 @@
+**Atenciosamente,** <br>
+{{ setting('appName') }}
