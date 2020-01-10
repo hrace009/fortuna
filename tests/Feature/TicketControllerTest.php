@@ -105,43 +105,6 @@ class TicketControllerTest extends TestCase
     /**
      * @test
      */
-    public function user_can_add_a_reply_to_a_ticket_with_attachment()
-    {
-        $ticket = $this->user->tickets()->create(
-            factory(Ticket::class)->make()->toArray()
-        );
-
-        $file = new UploadedFile(
-            public_path('images/pw-nome.jpg'),
-            'report_bug.jpg',
-            'image/jpg',
-            null,
-            null,
-            true
-        );
-
-        $reply = [
-            'message' => 'This is a reply.',
-            'attachments' => $file,
-        ];
-
-        $this->actingAs($this->user, 'api')
-            ->json('POST', "/api/tickets/{$ticket->track_id}/reply", $reply)
-            ->assertSuccessful();
-
-        $this->assertDatabaseHas('ticket_replies', [
-            'track_id' => $ticket->track_id,
-            'message' => $reply['message'],
-        ]);
-
-        $this->assertDatabaseHas('files', [
-            'original_name' => 'report_bug.jpg',
-        ]);
-    }
-
-    /**
-     * @test
-     */
     public function user_can_not_see_a_ticket_from_another_user()
     {
         $ticket = $this->user->tickets()->create(
@@ -155,36 +118,6 @@ class TicketControllerTest extends TestCase
         $response = $this->actingAs($anotherUser, 'api')
             ->json('GET', '/api/tickets/'.$ticket->track_id);
         $response->assertForbidden();
-    }
-
-    /**
-     * @test
-     */
-    public function user_can_upload_attachments()
-    {
-        $file = new UploadedFile(
-            public_path('images/pw-nome.jpg'),
-            'pw-nome.jpg',
-            'image/jpg',
-            null,
-            null,
-            true
-        );
-
-        $data = [
-            'subject' => $this->faker->sentence,
-            'category_id' => 1,
-            'message' => $this->faker->text,
-            'attachments' => $file,
-        ];
-
-        $this->actingAs($this->user)
-            ->json('POST', '/api/tickets', $data);
-
-        $this->assertDatabaseHas('tickets', ['category_id' => 1]);
-        $this->assertDatabaseHas('files', [
-            'original_name' => 'pw-nome.jpg',
-        ]);
     }
 
     /**

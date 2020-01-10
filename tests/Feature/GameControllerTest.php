@@ -80,6 +80,8 @@ class GameControllerTest extends TestCase
      */
     public function user_can_change_game_account_password()
     {
+        $this->withoutExceptionHandling();
+
         Event::fake();
 
         $game = $this->user->accounts()->create($this->createGameAcccount())->toArray();

@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth:api', 'throttle:50,1']], static function ()
 
         Route::prefix('account')->group(static function () {
             Route::get('{id}', 'User\Game\AccountController@show');
-            Route::patch('{id}', 'User\Game\AccountController@update');
+            Route::patch('{id}', 'User\Game\PasswordController@update');
         });
     });
 

@@ -19,7 +19,8 @@ class RegisterTest extends TestCase
     public function test_user_can_register()
     {
         $this->postJson('/api/register', [
-            'name' => $this->faker()->name,
+            'first_name' => $this->faker()->firstName(),
+            'last_name' => $this->faker()->lastName(),
             'email' => 'pedro@hotmail.com',
             'password' => 'password',
         ])

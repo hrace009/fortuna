@@ -73,28 +73,4 @@ class ProfileControllerTest extends TestCase
             1
         );
     }
-
-    /**
-     * @test
-     */
-    public function user_can_add_an_avatar()
-    {
-        $file = new UploadedFile(
-            public_path('images/pw-nome.jpg'),
-            'avatar.jpg',
-            'image/jpg',
-            null,
-            null,
-            true
-        );
-
-        $this->actingAs($this->user, 'api')
-            ->json('POST', '/api/settings/profile/avatar', [
-                'avatar' => $file,
-            ])
-            ->assertSuccessful()
-            ->assertJsonMissing([
-                'avatar' => 'https://pw4fun-painel.s3.sa-east-1.amazonaws.com/perfil-sem-foto.png',
-            ]);
-    }
 }
