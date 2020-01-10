@@ -54,7 +54,7 @@
                         <!-- Button -->
                         <div class="kt-login__actions">
                             <router-link :to="{ name: 'login' }" class="kt-link kt-login__link-forgot">Voltar</router-link>
-                            <vue-recaptcha ref="invisibleRecaptcha" theme="dark" @verify="onVerify" size="invisible" sitekey=""></vue-recaptcha>
+                            <vue-recaptcha ref="invisibleRecaptcha" theme="dark" @verify="onVerify" size="invisible" :sitekey="siteKey"></vue-recaptcha>
                             <v-button
                                 :class="'btn btn-primary btn-elevate kt-login__btn-primary'"
                                 :loading="form.busy"
@@ -76,7 +76,7 @@ import Form from 'vform'
 import VueRecaptcha from 'vue-recaptcha';
 import SocialAuth from '~/pages/auth/social'
 
-const { appName, socialLogin } = window.config
+const { appName, socialLogin, recaptcha } = window.config
 
 export default {
   middleware: 'guest',
@@ -96,7 +96,7 @@ export default {
       g_recaptcha_response: ''
     }),
     message: '',
-    siteKey: window.config.recaptcha,
+    siteKey: recaptcha,
     serverName: appName,    
     socialAuthEnabled: socialLogin,
   }),

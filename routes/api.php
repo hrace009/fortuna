@@ -23,7 +23,7 @@ Route::group(['middleware' => ['auth:api', 'throttle:50,1']], static function ()
     // Linked Accounts
     Route::prefix('game_accounts')->group(static function () {
         Route::get('all/paginate', 'User\Game\AccountController@index');
-        Route::get('all', 'User\Game\AccountController@all');
+        Route::get('all', 'User\Game\AccountController@index');
         Route::post('create_game_account', 'User\Game\RegisterController@store');
 
         Route::prefix('account')->group(static function () {

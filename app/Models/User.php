@@ -3,19 +3,20 @@
 namespace App\Models;
 
 use App\Notifications\ResetPassword as ResetPasswordNotification;
-use App\Services\FileManager\Traits\UploadFile;
 use App\Traits\ShouldConfirmEmail;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Spatie\Activitylog\Traits\CausesActivity;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable,
     ShouldConfirmEmail,
-    UploadFile;
+    CausesActivity, LogsActivity;
 
     /**
      * Boot function from laravel.
@@ -184,6 +185,11 @@ class User extends Authenticatable implements JWTSubject
     public function getDocumentAttribute($value)
     {
         return ! is_null($value) ? $this->formatDocument($value) : null;
+    }
+
+    public function scopeByConfirmationToken($query, string $token)
+    {
+        return $query->whereConfirmationToken($token);
     }
 
     /**

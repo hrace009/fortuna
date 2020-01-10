@@ -18,7 +18,7 @@ class TicketAttachmentsResource extends JsonResource
         return [
             'size' => formatSize($this->size),
             'name' => 'Anexo',
-            'url' => $this->getTemporaryUrl(Carbon::now()->addMinutes(5))
+            'url' => $this->getUrl()
         ];
     }
 }

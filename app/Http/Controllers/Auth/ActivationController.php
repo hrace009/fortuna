@@ -3,23 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\User\UserRepository;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ActivationController extends Controller
 {
-    protected $users;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct(UserRepository $user)
-    {
-        $this->users = $user;
-    }
-
     /**
      * Confirm the user's email address.
      *
@@ -29,7 +17,7 @@ class ActivationController extends Controller
      */
     public function confirmEmail(string $token, Request $request)
     {
-        if ($user = $this->users->findByConfirmationToken($token)) {
+        if ($user = User::ByConfirmationToken($token)) {
             if ($user->isConfirmed()) {
                 return response()->json(['type' => 'danger', 'text' => __('app.errors.account_already_activated')], 422);
             }

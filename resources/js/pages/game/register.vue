@@ -34,7 +34,7 @@
           <div class="form-group row m--margin-top-20">
               <label class="col-md-3 col-form-label text-md-right"></label>
               <div class="col-md-7">
-                  <vue-recaptcha ref="invisibleRecaptcha" @verify="onVerify" size="invisible" sitekey=""></vue-recaptcha>
+                  <vue-recaptcha ref="invisibleRecaptcha" @verify="onVerify" size="invisible" :sitekey="siteKey"></vue-recaptcha>
                   <v-button :class="'btn m-btn--pill m-btn--air btn-primary m--margin-top-10'" :loading="form.busy">
                      Cadastrar
                   </v-button>
@@ -50,6 +50,7 @@
 <script>
 import Form from 'vform'
 import VueRecaptcha from 'vue-recaptcha';
+const { recaptcha } = window.config
 
 export default {
 
@@ -70,6 +71,7 @@ export default {
       g_recaptcha_response: '',
     }),
     button: true,
+    siteKey: recaptcha
   }),
 
 

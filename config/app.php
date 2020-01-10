@@ -186,7 +186,6 @@ return [
         App\Providers\HorizonServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\RepositoryServiceProvider::class,
         App\Providers\PaymentServiceProvider::class,
         App\Providers\PaymentProcessServiceProvider::class,
         App\Providers\ObserversServiceProvider::class,
