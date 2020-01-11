@@ -2,10 +2,10 @@
 
 namespace App\Notifications;
 
-use App\Game\User as GameUser;
-use App\Mail\GamePasswordChanged as Mailable;
 use Illuminate\Bus\Queueable;
+use App\Game\User as GameUser;
 use Illuminate\Notifications\Notification;
+use App\Mail\GamePasswordChanged as Mailable;
 
 class GamePasswordChanged extends Notification
 {

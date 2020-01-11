@@ -3,8 +3,8 @@
 namespace App\Services\Payment;
 
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
-use PayPalCheckoutSdk\Core\ProductionEnvironment as Production;
 use PayPalCheckoutSdk\Core\SandboxEnvironment as Sandbox;
+use PayPalCheckoutSdk\Core\ProductionEnvironment as Production;
 
 class PayPalClient
 {

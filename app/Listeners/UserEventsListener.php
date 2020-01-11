@@ -3,20 +3,20 @@
 namespace App\Listeners;
 
 use App\Events\Associated;
-use App\Events\GamePasswordChanged;
-use App\Events\PasswordChanged as EventPasswordChanged;
+use App\Events\SocialLogin;
 use App\Events\ProfilePhoto;
 use App\Events\RegisteredGame;
-use App\Events\SocialLogin;
-use App\Events\TwoFactorDisabled;
 use App\Events\TwoFactorEnabled;
-use App\Events\UpdateProfileDetails as UpdateProfile;
-use App\Notifications\Associated as AssociatedNotification;
-use App\Notifications\GamePasswordChanged as GamePasswordChangedNotification;
-use App\Notifications\PasswordChanged;
-use App\Notifications\RegisteredGame as RegisteredGameNotification;
+use App\Events\TwoFactorDisabled;
 use App\Notifications\TfaEnabled;
+use App\Events\GamePasswordChanged;
+use App\Notifications\PasswordChanged;
 use Illuminate\Auth\Events\PasswordReset;
+use App\Events\UpdateProfileDetails as UpdateProfile;
+use App\Events\PasswordChanged as EventPasswordChanged;
+use App\Notifications\Associated as AssociatedNotification;
+use App\Notifications\RegisteredGame as RegisteredGameNotification;
+use App\Notifications\GamePasswordChanged as GamePasswordChangedNotification;
 
 class UserEventsListener
 {

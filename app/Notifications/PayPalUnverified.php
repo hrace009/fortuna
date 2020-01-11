@@ -2,9 +2,9 @@
 
 namespace App\Notifications;
 
-use App\Mail\PayPalUnverified as Mailable;
 use App\Models\Payments;
 use Illuminate\Bus\Queueable;
+use App\Mail\PayPalUnverified as Mailable;
 use Illuminate\Notifications\Notification;
 
 class PayPalUnverified extends Notification

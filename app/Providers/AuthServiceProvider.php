@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Policies\GameRolesPolicy;
 use App\Models\Roles;
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use App\Policies\GameRolesPolicy;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {

@@ -3,8 +3,8 @@
 namespace App\Presenters;
 
 use App\Models\PaymentGateway;
-use Facades\App\Services\Payment\PaymentStatuses;
 use Laracasts\Presenter\Presenter;
+use Facades\App\Services\Payment\PaymentStatuses;
 
 class PaymentPresenter extends Presenter
 {

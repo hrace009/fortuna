@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Str;
 use Tests\TestCase;
+use App\Models\User;
+use Illuminate\Support\Str;
 use Vinkla\Hashids\Facades\Hashids;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class GameControllerTest extends TestCase
 {

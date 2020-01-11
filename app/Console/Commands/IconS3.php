@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use Illuminate\Http\File;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
 class IconS3 extends Command

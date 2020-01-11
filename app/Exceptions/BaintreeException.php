@@ -2,8 +2,8 @@
 
 namespace App\Exceptions;
 
-use BraintreeHttp\HttpException;
 use Exception;
+use BraintreeHttp\HttpException;
 
 class BaintreeException extends Exception
 {

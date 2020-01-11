@@ -2,13 +2,13 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
 use Cache;
 use Crypt;
-use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Factory as Validation;
+use App\Models\User;
 use PragmaRX\Google2FA\Google2FA;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Factory as Validation;
 
 class TwoFactorRequest extends FormRequest
 {

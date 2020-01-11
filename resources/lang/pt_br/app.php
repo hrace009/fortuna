@@ -45,11 +45,11 @@ return [
             11 => 'Tormentador',
         ],
         'factionPos' => [
-             2 => 'Marechal',
-             3 => 'General',
-             4 => 'Major',
-             5 => 'Capitão',
-             6 => 'Membro',
+            2 => 'Marechal',
+            3 => 'General',
+            4 => 'Major',
+            5 => 'Capitão',
+            6 => 'Membro',
         ],
         'cultivationName' => [
             0 => 'Leal',

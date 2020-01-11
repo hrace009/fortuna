@@ -34,6 +34,6 @@ class ResetPassword extends Mailable
         return $this->markdown('emails.user.resetpassword', [
             'url'  => url(config('app.url').'/esqueci-a-senha/'.$this->token).'?email='.urlencode($this->notifiable->email),
             'name' => $this->notifiable->name,
-            ]);
+        ]);
     }
 }

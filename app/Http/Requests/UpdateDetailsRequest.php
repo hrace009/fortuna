@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Rules\ValidFacebookProfile;
+use App\Models\User;
 use App\Rules\ValidTwitterProfile;
 use App\Rules\ValidYouTubeChannel;
-use App\Models\User;
+use App\Rules\ValidFacebookProfile;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateDetailsRequest extends FormRequest

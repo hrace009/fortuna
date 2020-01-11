@@ -2,14 +2,14 @@
 
 namespace App\Services\Payment;
 
-use App\Contracts\PaymentProvider;
 use App\Models\Payments;
-use App\Models\Payments as Order;
-use Facades\App\Services\Payment\PaymentStatuses;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
+use Illuminate\Http\Request;
+use App\Models\Payments as Order;
+use App\Contracts\PaymentProvider;
+use Facades\App\Services\Payment\PaymentStatuses;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
+use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
 
 class PayPal implements PaymentProvider
 {
@@ -85,8 +85,8 @@ class PayPal implements PaymentProvider
         $order->forceFill(['transaction_reference' => $token])->save();
 
         return response()->json([
-                'code' => $response->result->id,
-                'token' => $token,
+            'code' => $response->result->id,
+            'token' => $token,
         ], 200);
     }
 

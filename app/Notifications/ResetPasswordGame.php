@@ -2,8 +2,8 @@
 
 namespace App\Notifications;
 
-use App\Mail\ResetPasswordGame as Mailable;
 use Illuminate\Notifications\Notification;
+use App\Mail\ResetPasswordGame as Mailable;
 
 class ResetPasswordGame extends Notification
 {

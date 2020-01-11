@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\User\Game;
 
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Events\GamePasswordChanged;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserGameResource;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class AccountController extends Controller
 {
-
     /**
      * Paginate associated game accounts from the authenticated user.
      *

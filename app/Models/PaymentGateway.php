@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Facades\App\Services\Payment\PaymentsFactory;
 use Illuminate\Database\Eloquent\Model;
+use Facades\App\Services\Payment\PaymentsFactory;
 
 class PaymentGateway extends Model
 {

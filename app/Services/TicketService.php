@@ -2,13 +2,13 @@
 
 namespace App\Services;
 
-use App\Events\TicketUpdated as TicketUpdatedEvent;
-use App\Exceptions\TicketClosed;
 use App\Models\File;
-use App\Models\Ticket;
 use App\Models\User;
-use App\Notifications\Ticket\TicketClosed as TicketClosedNotification;
+use App\Models\Ticket;
+use App\Exceptions\TicketClosed;
 use App\Notifications\Ticket\TicketUpdated;
+use App\Events\TicketUpdated as TicketUpdatedEvent;
+use App\Notifications\Ticket\TicketClosed as TicketClosedNotification;
 
 class TicketService
 {

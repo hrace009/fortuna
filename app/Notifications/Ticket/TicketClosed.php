@@ -2,8 +2,8 @@
 
 namespace App\Notifications\Ticket;
 
-use App\Models\Ticket;
 use App\Models\User;
+use App\Models\Ticket;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 

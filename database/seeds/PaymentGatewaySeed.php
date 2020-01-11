@@ -14,12 +14,12 @@ class PaymentGatewaySeed extends Seeder
      */
     public function run()
     {
-       $this->getGateways()->each(function ($gateway) {
+        $this->getGateways()->each(function ($gateway) {
             return PaymentGateway::create($gateway);
-       });
+        });
     }
 
-    public function getGateways() : Collection
+    public function getGateways(): Collection
     {
         return collect([
             [
@@ -32,7 +32,7 @@ class PaymentGatewaySeed extends Seeder
             [
                 'name' => 'PayPal',
                 'slug' => 'paypal',
-                'payment_methods' => json_encode(["visa", "mastercard", "elo", "hiper"]),
+                'payment_methods' => json_encode(['visa', 'mastercard', 'elo', 'hiper']),
                 'enabled' => true,
                 'delivery_time' => 'Em alguns minutos o pagamento é aprovado, e seu Gold é liberado em seguida.',
                 'description' => 'Até 3x sem juros no cartão',
@@ -40,11 +40,11 @@ class PaymentGatewaySeed extends Seeder
             [
                 'name' => 'Mercado Pago',
                 'slug' => 'mercadopago',
-                'payment_methods' => json_encode(["visa", "mastercard", "elo", "hiper"]),
+                'payment_methods' => json_encode(['visa', 'mastercard', 'elo', 'hiper']),
                 'enabled' => true,
                 'delivery_time' => 'Em alguns minutos o pagamento é aprovado, e seu Gold é liberado em seguida.',
                 'description' => 'Até 12x sem juros no cartão',
-            ]
+            ],
         ]);
     }
 }

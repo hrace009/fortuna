@@ -2,11 +2,11 @@
 
 namespace App\Notifications\Ticket;
 
-use App\Mail\Ticket\TicketUpdated as Mailable;
 use App\Models\TicketReply;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mail\Ticket\TicketUpdated as Mailable;
 
 class TicketUpdated extends Notification implements ShouldQueue
 {

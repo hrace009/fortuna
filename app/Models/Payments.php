@@ -4,10 +4,10 @@ namespace App\Models;
 
 use App\Presenters\PaymentPresenter;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Laracasts\Presenter\PresentableTrait;
-use Spatie\Activitylog\Traits\CausesActivity;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Activitylog\Traits\CausesActivity;
 
 /**
  * Class Payments.
@@ -148,21 +148,21 @@ class Payments extends Model
      * @param int $amount
      * @return string
      */
-    public function formatAmount($amount) : string
+    public function formatAmount($amount): string
     {
         $amount = number_format(($amount * 100) / 100, 0, '.', '.');
 
         return $amount;
     }
 
-    public function formatMoney($amount) : string
+    public function formatMoney($amount): string
     {
         $formatter = new \NumberFormatter('pt-BR', \NumberFormatter::CURRENCY);
 
         return $formatter->format($amount);
     }
 
-    public function formatGateway() : string
+    public function formatGateway(): string
     {
         return __("app.order.gateways.{$this->gateway}");
     }
@@ -177,7 +177,7 @@ class Payments extends Model
         return ! is_null($this->delivered_at);
     }
 
-    public function markAsDelivered() : bool
+    public function markAsDelivered(): bool
     {
         $addcash = \App\Game\User::addcash(decodeHashIdentifier($this->game_id), $this->cash_amount);
 

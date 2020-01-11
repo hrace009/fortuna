@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\Contracts\PaymentProvider;
-use App\Models\PaymentGateway;
-use App\Models\Payments;
-use App\Models\User;
-use Facades\App\Services\Payment\PaymentsFactory;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;
+use App\Models\User;
+use App\Models\Payments;
+use App\Models\PaymentGateway;
+use App\Contracts\PaymentProvider;
 use Vinkla\Hashids\Facades\Hashids;
+use Facades\App\Services\Payment\PaymentsFactory;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class PaymentGatewayTest extends TestCase
 {

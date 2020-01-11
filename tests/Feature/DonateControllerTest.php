@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Models\GoldPackage;
-use App\Models\Payments;
-use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Str;
 use Tests\TestCase;
+use App\Models\User;
+use App\Models\Payments;
+use App\Models\GoldPackage;
+use Illuminate\Support\Str;
 use Vinkla\Hashids\Facades\Hashids;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class DonateControllerTest extends TestCase
 {
@@ -55,7 +55,7 @@ class DonateControllerTest extends TestCase
     public function user_can_create_an_order()
     {
         $this->withoutExceptionHandling();
-        
+
         $game = $this->user->accounts()->create($this->createGameAcccount())->toArray();
 
         $order = [

@@ -2,9 +2,9 @@
 
 namespace App\Mail;
 
-use App\Game\User as UserGame;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use App\Game\User as UserGame;
 use Illuminate\Queue\SerializesModels;
 
 class Associated extends Mailable

@@ -2,9 +2,9 @@
 
 namespace App\Notifications;
 
-use App\Mail\TfaEnabled as Mailable;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
+use App\Mail\TfaEnabled as Mailable;
 use Illuminate\Notifications\Notification;
 
 class TfaEnabled extends Notification

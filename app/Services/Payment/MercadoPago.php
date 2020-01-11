@@ -2,16 +2,16 @@
 
 namespace App\Services\Payment;
 
-use App\Contracts\PaymentProvider;
-use App\Models\Payments;
-use App\Models\Payments as Order;
-use Facades\App\Services\Payment\PaymentStatuses;
-use Illuminate\Http\Response;
+use MercadoPago\SDK;
 use MercadoPago\Item;
 use MercadoPago\Payer;
+use App\Models\Payments;
 use MercadoPago\Payment;
 use MercadoPago\Preference;
-use MercadoPago\SDK;
+use Illuminate\Http\Response;
+use App\Models\Payments as Order;
+use App\Contracts\PaymentProvider;
+use Facades\App\Services\Payment\PaymentStatuses;
 
 class MercadoPago implements PaymentProvider
 {

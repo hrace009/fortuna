@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PaymentGateway;
 use Illuminate\Http\Request;
+use App\Models\PaymentGateway;
 
 class PaymentNotifications extends Controller
 {

@@ -34,6 +34,6 @@ class ResetPasswordGame extends Mailable
         return $this->markdown('emails.user.resetpasswordgame', [
             'url'  => url(config('app.url').'/contas-vinculadas/redefinir-senha/'.$this->token).'?name='.$this->notifiable->name,
             'user' => $this->notifiable,
-            ]);
+        ]);
     }
 }

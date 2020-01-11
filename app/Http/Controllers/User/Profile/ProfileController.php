@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\User\Profile;
 
-use App\Events\UpdateProfileDetails as ProfileUpdated;
+use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
-use Illuminate\Validation\Rule;
+use App\Events\UpdateProfileDetails as ProfileUpdated;
 
 class ProfileController extends Controller
 {

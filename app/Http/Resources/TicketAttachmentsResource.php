@@ -18,7 +18,7 @@ class TicketAttachmentsResource extends JsonResource
         return [
             'size' => formatSize($this->size),
             'name' => 'Anexo',
-            'url' => $this->getUrl()
+            'url' => $this->getUrl(),
         ];
     }
 }

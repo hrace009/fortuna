@@ -3,8 +3,8 @@
 namespace App\Http\Resources;
 
 use App\Models\GameService;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Vinkla\Hashids\Facades\Hashids;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class CharacterResource extends JsonResource
 {

@@ -2,11 +2,11 @@
 
 namespace App\Notifications;
 
-use App\Mail\EmailConfirmation;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mail\EmailConfirmation;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ConfirmRegistration extends Notification implements ShouldQueue
 {

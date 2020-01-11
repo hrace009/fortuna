@@ -2,11 +2,11 @@
 
 namespace App\Notifications\Orders;
 
-use App\Mail\Orders\PaymentReserved as Mailable;
 use App\Models\Payments;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mail\Orders\PaymentReserved as Mailable;
 
 class PaymentReserved extends Notification implements ShouldQueue
 {

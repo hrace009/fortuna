@@ -2,9 +2,9 @@
 
 namespace App\Policies;
 
+use App\Models\User;
 use App\Models\Payments;
 use App\Support\Enums\PaymentStatus;
-use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class DonatePolicy

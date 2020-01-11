@@ -2,10 +2,10 @@
 
 namespace App\Notifications\Orders;
 
-use App\Mail\Orders\PaymentCanceled as Mailable;
 use App\Models\Payments;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
+use App\Mail\Orders\PaymentCanceled as Mailable;
 
 class PaymentCanceled extends Notification
 {

@@ -2,10 +2,10 @@
 
 namespace App\Notifications;
 
-use App\Mail\ResetPassword as Mailable;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mail\ResetPassword as Mailable;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ResetPassword extends Notification implements ShouldQueue
 {

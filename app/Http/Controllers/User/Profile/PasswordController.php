@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\User\Profile;
 
-use App\Events\PasswordChanged as EventPasswordChanged;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Events\PasswordChanged as EventPasswordChanged;
 
 class PasswordController extends Controller
 {

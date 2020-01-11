@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\User\Game;
 
 use App\Game\User;
-use App\Http\Controllers\Controller;
-use App\Http\Resources\CharacterResource;
-use App\Jobs\UserUpdateGameCharacters;
 use App\Models\Roles;
-use Facades\App\Services\ApiConnect;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Facades\App\Services\ApiConnect;
+use App\Jobs\UserUpdateGameCharacters;
 use Illuminate\Support\Facades\Response;
+use App\Http\Resources\CharacterResource;
 
 class RolesController extends Controller
 {

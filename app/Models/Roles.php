@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Notifications\BankResetConfirmation as BankResetConfirmationNotification;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use App\Notifications\BankResetConfirmation as BankResetConfirmationNotification;
 
 class Roles extends Model
 {

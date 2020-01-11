@@ -1,8 +1,8 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Models\PaymentGateway;
 use Faker\Generator as Faker;
+use App\Models\PaymentGateway;
 
 $factory->define(PaymentGateway::class, function (Faker $faker) {
     return [

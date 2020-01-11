@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\User\Ticket;
 
+use App\Models\Ticket;
 use App\Exceptions\TicketClosed;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\TicketReplyRequest;
-use App\Http\Resources\TicketResource;
-use App\Models\Ticket;
 use Illuminate\Support\Facades\Crypt;
+use App\Http\Resources\TicketResource;
+use App\Http\Requests\TicketReplyRequest;
 
 class ReplyController extends Controller
 {

@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Facades\App\Services\GameServices\ServicesFactory;
 use Illuminate\Database\Eloquent\Model;
+use Facades\App\Services\GameServices\ServicesFactory;
 
 class GameService extends Model
 {
