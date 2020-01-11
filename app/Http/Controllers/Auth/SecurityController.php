@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\TwoFactorBackupRequest;
-use App\Http\Requests\TwoFactorRequest;
-use App\Models\User;
 use Cache;
+use App\Models\User;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\TwoFactorRequest;
+use App\Http\Requests\TwoFactorBackupRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class SecurityController extends Controller

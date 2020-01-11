@@ -2,13 +2,13 @@
 
 namespace App\Services\Payment;
 
+use Illuminate\Support\Facades\DB;
+use App\Models\Payments as Transaction;
+use App\Notifications\Orders\PaymentPending;
 use App\Notifications\Orders\PaymentApproved;
 use App\Notifications\Orders\PaymentCanceled;
-use App\Notifications\Orders\PaymentPending;
-use App\Models\Payments as Transaction;
-use Facades\App\Services\Payment\PaymentStatuses;
-use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
+use Facades\App\Services\Payment\PaymentStatuses;
 
 class NotificationHandler
 {

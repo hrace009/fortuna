@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Services\Payment\PaymentProcess;
 use Illuminate\Support\ServiceProvider;
+use App\Services\Payment\PaymentProcess;
 
 class PaymentProcessServiceProvider extends ServiceProvider
 {

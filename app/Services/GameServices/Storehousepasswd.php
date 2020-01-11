@@ -2,8 +2,8 @@
 
 namespace App\Services\GameServices;
 
-use App\Game\BankReset as StorehouseReset;
 use App\Game\User as UserGame;
+use App\Game\BankReset as StorehouseReset;
 use App\Notifications\BankResetConfirmation;
 use Facades\App\Services\ApiConnect as GameAPI;
 

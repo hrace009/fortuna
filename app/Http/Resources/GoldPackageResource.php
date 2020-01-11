@@ -18,7 +18,7 @@ class GoldPackageResource extends JsonResource
             'id' => $this->package_id,
             'name' => $this->package_name,
             'price' => $this->package_price,
-            'golds' => $this->package_gold_amount
+            'golds' => $this->package_gold_amount,
         ];
     }
 }

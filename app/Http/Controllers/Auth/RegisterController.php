@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
+use Illuminate\Http\Request;
+use App\Rules\ValidEmailProvider;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
-use App\Rules\ValidEmailProvider;
-use App\Models\User;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -64,14 +64,14 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param array $data 
+     * @param array $data
      *
      * @return \App\Models\User
      */
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['first_name'] . ' ' . $data['last_name'],
+            'name' => $data['first_name'].' '.$data['last_name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'status' => 'UNCONFIRMED',
@@ -100,7 +100,7 @@ class RegisterController extends Controller
      */
     protected function validationRules(): array
     {
-        $rules =  [
+        $rules = [
             'first_name' => 'required|string|min:3|max:16',
             'last_name' => 'required|string|min:3|max:16',
             'email' => ['required', 'email', 'unique:users', new ValidEmailProvider()],

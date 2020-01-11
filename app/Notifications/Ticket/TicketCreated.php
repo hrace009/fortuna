@@ -2,16 +2,16 @@
 
 namespace App\Notifications\Ticket;
 
-use App\Mail\Ticket\TicketCreated as Mailable;
 use App\Models\Ticket;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mail\Ticket\TicketCreated as Mailable;
 
 class TicketCreated extends Notification implements ShouldQueue
 {
     use Queueable;
-    
+
     protected $ticket;
 
     /**

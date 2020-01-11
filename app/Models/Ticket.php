@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Services\FileManager\Traits\UploadFile;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
+use App\Services\FileManager\Traits\UploadFile;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 class Ticket extends Model implements HasMedia

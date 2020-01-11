@@ -2,11 +2,11 @@
 
 namespace App\Mail;
 
-use App\Game\BankReset as GameStorehouseReset;
 use Hashids;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Game\BankReset as GameStorehouseReset;
 
 class BankResetConfirmation extends Mailable
 {

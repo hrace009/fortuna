@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\Game\User as UserGame;
 use App\Models\User;
+use App\Game\User as UserGame;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class GameAssociated

@@ -4,9 +4,9 @@ namespace App\Mail\Ticket;
 
 use App\Models\TicketReply;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class TicketUpdated extends Mailable implements ShouldQueue
 {

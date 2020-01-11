@@ -2,8 +2,8 @@
 
 namespace App\Notifications;
 
-use App\Mail\RegisteredGame as Mailable;
 use Illuminate\Bus\Queueable;
+use App\Mail\RegisteredGame as Mailable;
 use Illuminate\Notifications\Notification;
 
 class RegisteredGame extends Notification

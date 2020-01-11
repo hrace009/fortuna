@@ -31,9 +31,9 @@ class ReCaptcha implements Rule
         $response = $client->post(
             'https://www.google.com/recaptcha/api/siteverify',
             ['form_params'=> [
-                    'secret'  => config('services.google.recaptcha.secret_key'),
-                    'response'=> $value,
-                 ],
+                'secret'  => config('services.google.recaptcha.secret_key'),
+                'response'=> $value,
+            ],
             ]
         );
 

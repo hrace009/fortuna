@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\User\Donate;
 
-use App\Http\Controllers\Controller;
-use App\Http\Resources\PaymentGatewayResource;
-use App\Models\PaymentGateway;
 use Illuminate\Http\Request;
+use App\Models\PaymentGateway;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
+use App\Http\Resources\PaymentGatewayResource;
 
 class PaymentGatewaysController extends Controller
 {

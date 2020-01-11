@@ -2,10 +2,10 @@
 
 namespace App\Notifications;
 
-use App\Game\BankReset as GameStorehouseReset;
-use App\Mail\BankResetConfirmation as Mailable;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
+use App\Game\BankReset as GameStorehouseReset;
+use App\Mail\BankResetConfirmation as Mailable;
 
 class BankResetConfirmation extends Notification
 {

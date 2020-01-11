@@ -2,16 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\Events\PasswordChanged;
-use App\Events\UpdateProfileDetails;
-use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
+use App\Models\User;
+use App\Events\PasswordChanged;
+use Illuminate\Http\UploadedFile;
+use App\Events\UpdateProfileDetails;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ProfileControllerTest extends TestCase
 {

@@ -2,9 +2,9 @@
 
 namespace App\Notifications;
 
-use App\Mail\PasswordChanged as Mailable;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
+use App\Mail\PasswordChanged as Mailable;
 use Illuminate\Notifications\Notification;
 
 class PasswordChanged extends Notification

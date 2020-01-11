@@ -2,8 +2,8 @@
 
 namespace App\Rules;
 
-use App\Inspections\Protection;
 use Exception;
+use App\Inspections\Protection;
 use Illuminate\Contracts\Validation\Rule;
 
 class Unkiddief implements Rule

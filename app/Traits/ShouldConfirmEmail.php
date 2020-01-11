@@ -2,8 +2,8 @@
 
 namespace App\Traits;
 
-use App\Notifications\ConfirmRegistration;
 use Illuminate\Support\Carbon;
+use App\Notifications\ConfirmRegistration;
 
 trait ShouldConfirmEmail
 {

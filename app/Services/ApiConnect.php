@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Exceptions\GameApiException;
 use GuzzleHttp\Client;
+use App\Exceptions\GameApiException;
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\RequestException;
 

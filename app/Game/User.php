@@ -2,16 +2,16 @@
 
 namespace App\Game;
 
-use App\Events\UpdateGameCharactersFinished;
-use App\Events\UpdateGameCharactersRunning;
-use App\Notifications\ResetPasswordGame as ResetPasswordNotification;
 use DB;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Carbon;
+use App\Events\UpdateGameCharactersRunning;
 use Spatie\Activitylog\Traits\LogsActivity;
+use App\Events\UpdateGameCharactersFinished;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use App\Notifications\ResetPasswordGame as ResetPasswordNotification;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class User extends Model implements CanResetPasswordContract
 {

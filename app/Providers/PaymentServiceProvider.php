@@ -2,13 +2,13 @@
 
 namespace App\Providers;
 
-use App\Repositories\Payment\PagHiper;
-use App\Repositories\Payment\PagSeguro;
+use App\Services\RegistryManager;
 use App\Repositories\Payment\PayPal;
 use App\Repositories\Payment\PicPay;
-use App\Repositories\TwoFactor\Authenticator;
-use App\Services\RegistryManager;
+use App\Repositories\Payment\PagHiper;
+use App\Repositories\Payment\PagSeguro;
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\TwoFactor\Authenticator;
 
 class PaymentServiceProvider extends ServiceProvider
 {

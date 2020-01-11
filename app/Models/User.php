@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use App\Notifications\ResetPassword as ResetPasswordNotification;
-use App\Traits\ShouldConfirmEmail;
 use Carbon\Carbon;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
+use App\Traits\ShouldConfirmEmail;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use Spatie\Activitylog\Traits\CausesActivity;
+use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\Traits\CausesActivity;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\ResetPassword as ResetPasswordNotification;
 
 class User extends Authenticatable implements JWTSubject
 {

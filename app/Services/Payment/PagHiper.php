@@ -2,11 +2,11 @@
 
 namespace App\Services\Payment;
 
-use App\Contracts\PaymentProvider;
 use App\Models\Payments;
 use App\Models\Payments as Order;
-use Facades\App\Services\Payment\PaymentStatuses;
+use App\Contracts\PaymentProvider;
 use Symfony\Component\HttpFoundation\Response;
+use Facades\App\Services\Payment\PaymentStatuses;
 use WebMaster\PagHiper\PagHiper as PagHiperPayment;
 
 class PagHiper implements PaymentProvider

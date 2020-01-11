@@ -52,7 +52,6 @@ return [
         'client_secret' => env('MP_CLIENT_SECRET'),
     ],
 
-
     'social_auth' => false,
 
     'facebook' => [

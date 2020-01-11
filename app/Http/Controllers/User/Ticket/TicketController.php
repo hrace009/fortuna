@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\User\Ticket;
 
+use App\Models\Ticket;
 use App\Events\NewTicket;
+use Illuminate\Http\Request;
+use App\Models\TicketCategory;
+use App\Services\TicketService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TicketRequest;
-use App\Http\Resources\TicketCategoriesResource;
-use App\Http\Resources\TicketResource;
-use App\Models\Ticket;
-use App\Models\TicketCategory;
-use App\Notifications\Ticket\TicketCreated;
-use App\Services\TicketService;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use App\Http\Resources\TicketResource;
+use App\Notifications\Ticket\TicketCreated;
+use App\Http\Resources\TicketCategoriesResource;
 
 class TicketController extends Controller
 {

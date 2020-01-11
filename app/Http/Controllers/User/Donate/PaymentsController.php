@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\User\Donate;
 
-use App\Http\Controllers\Controller;
-use App\Http\Resources\OrderResource;
-use App\Models\PaymentGateway;
-use App\Models\Payments as Donate;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\PaymentGateway;
+use Illuminate\Http\JsonResponse;
+use App\Models\Payments as Donate;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\OrderResource;
 
 class PaymentsController extends Controller
 {

@@ -2,9 +2,9 @@
 
 namespace App\Notifications;
 
+use Illuminate\Bus\Queueable;
 use App\Game\User as UserGame;
 use App\Mail\Associated as Mailable;
-use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
 class Associated extends Notification

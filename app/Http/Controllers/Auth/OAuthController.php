@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use App\Events\SocialLogin;
 use App\Http\Controllers\Controller;
+use Laravel\Socialite\Facades\Socialite;
 use App\Repositories\User\UserRepository;
-use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Contracts\User as SocialUser;
-use Laravel\Socialite\Facades\Socialite;
 
 class OAuthController extends Controller
 {

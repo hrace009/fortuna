@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Observers\ActivityObserver;
-use App\Observers\TicketObserver;
 use App\Models\Ticket;
+use App\Observers\TicketObserver;
+use App\Observers\ActivityObserver;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Activitylog\Models\Activity;
 

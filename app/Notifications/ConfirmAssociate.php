@@ -2,9 +2,9 @@
 
 namespace App\Notifications;
 
+use Illuminate\Bus\Queueable;
 use App\Game\User as UserGame;
 use App\Mail\ConfirmAssociate as Mailable;
-use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
 class ConfirmAssociate extends Notification

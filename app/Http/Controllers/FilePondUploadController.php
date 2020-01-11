@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class FilePondUploadController extends Controller
 {
@@ -18,12 +18,12 @@ class FilePondUploadController extends Controller
     public function upload(Request $request)
     {
         $request->validate([
-            'attachments' => 'sometimes|image|mimes:jpeg,png'
+            'attachments' => 'sometimes|image|mimes:jpeg,png',
         ]);
-     
+
         $file = $request->file('attachments');
 
-        $filePath = tempnam(realpath(sys_get_temp_dir()), "attachment-");
+        $filePath = tempnam(realpath(sys_get_temp_dir()), 'attachment-');
         $filePath .= ".{$file->getClientOriginalExtension()}";
         $fileInfo = pathinfo($filePath);
 
@@ -43,13 +43,13 @@ class FilePondUploadController extends Controller
     public function delete(Request $request)
     {
         $uniqueFileId = $request->getContent();
-        
+
         if (empty($uniqueFileId)) {
             return response()->json([
                 'error' => [
-                    'message' => 'Missing file!'
-                ]
-                ], Response::HTTP_BAD_REQUEST);
+                    'message' => 'Missing file!',
+                ],
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         try {
@@ -61,17 +61,15 @@ class FilePondUploadController extends Controller
 
             return response()->json([
                 'error' => [
-                   'message' => 'Could not remove file.'
-                ]
-                ], Response::HTTP_NOT_ACCEPTABLE);
-                
+                    'message' => 'Could not remove file.',
+                ],
+            ], Response::HTTP_NOT_ACCEPTABLE);
         } catch (DecryptException $e) {
             return response()->json([
                 'error' => [
-                   'message' => $e->getMessage()
-                ]
-                ], Response::HTTP_INTERNAL_SERVER_ERROR);
+                    'message' => $e->getMessage(),
+                ],
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-
     }
 }

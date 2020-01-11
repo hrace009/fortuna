@@ -2,8 +2,8 @@
 
 namespace App\Rules;
 
-use App\Game\User as UserGame;
 use Hashids;
+use App\Game\User as UserGame;
 use Illuminate\Contracts\Validation\Rule;
 
 class ValidGameAccount implements Rule

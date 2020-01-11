@@ -2,13 +2,12 @@
 
 namespace Tests\Unit;
 
-use App\Models\GoldPackage;
-use App\Models\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-
+use App\Models\User;
+use App\Models\GoldPackage;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class GoldPackageTest extends TestCase
 {
@@ -27,7 +26,7 @@ class GoldPackageTest extends TestCase
         factory(GoldPackage::class, 5)->create();
 
         $this->actingAs(factory(User::class)->create([
-            'status' => 'CONFIRMED'
+            'status' => 'CONFIRMED',
         ]), 'api');
 
         $response = $this->json('GET', '/api/gold_packages')

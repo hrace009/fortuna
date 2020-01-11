@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\User\Game;
 
-use App\Events\RegisteredGame;
 use App\Game\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Events\RegisteredGame;
+use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {

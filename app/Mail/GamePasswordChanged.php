@@ -2,9 +2,9 @@
 
 namespace App\Mail;
 
-use App\Game\User as GameUser;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use App\Game\User as GameUser;
 use Illuminate\Queue\SerializesModels;
 
 class GamePasswordChanged extends Mailable
