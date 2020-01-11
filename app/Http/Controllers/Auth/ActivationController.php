@@ -17,7 +17,7 @@ class ActivationController extends Controller
      */
     public function confirmEmail(string $token, Request $request)
     {
-        if ($user = User::ByConfirmationToken($token)) {
+        if ($user = User::ByConfirmationToken($token)->first()) {
             if ($user->isConfirmed()) {
                 return response()->json(['type' => 'danger', 'text' => __('app.errors.account_already_activated')], 422);
             }
