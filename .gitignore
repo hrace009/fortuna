@@ -1,34 +1,25 @@
-# Ignore assets that are generated automatically
+# Laravel specific
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+.php_cs.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
 
+# Ignore assets that are generated automatically
 /public/backend
 /public/css
 /public/js
 /public/vendor
-/public/dist
 
-# Laravel
-/node_modules
-/storage/*.key
-/storage/fonts/
-/storage/framework
-/vendor
-.env.testing
-.env
-.phpunit.result.cache
-npm-debug.log
-yarn-error.log
-laravel-echo-server.json
-laravel-echo-server.lock
-
-# Env
+# IDE especifc
 /.vscode
 /.history
 /.idea
-
-.DS_Store
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
-
-.php_cs.cache
